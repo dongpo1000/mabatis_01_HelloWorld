@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--通过 SqlSession 实例来直接执行已映射的 SQL 语句-->
+<!--<mapper namespace="com.pywl.EmployeeMapper">
+    <select id="selectEmp" resultType="com.pywl.entity.Employee">
+        SELECT
+          id,
+          user_name userName,
+          gender,
+          email
+        FROM
+          tb_employee
+        WHERE
+          id = #{id}
+    </select>
+</mapper>-->
+
+<!--使用mapper接口-->
+<mapper namespace="com.pywl.mapper.EmployeeMapper">
+    <select id="selectByPrimaryId" resultType="com.pywl.entity.Employee">
+        SELECT
+          id,
+          user_name userName,
+          gender,
+          email
+        FROM
+          tb_employee
+        WHERE
+          id = #{id}
+    </select>
+</mapper>
