@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<!--使用mapper接口-->
-<mapper namespace="com.pywl.mapper.EmployeeMapper">
-    <select id="selectByPrimaryId" resultType="com.pywl.entity.Employee">
+<!--通过 SqlSession 实例来直接执行已映射的 SQL 语句-->
+<mapper namespace="com.pywl.EmployeeMapper1">
+    <select id="selectEmp" resultType="com.pywl.entity.Employee">
         SELECT
           id,
           user_name userName,

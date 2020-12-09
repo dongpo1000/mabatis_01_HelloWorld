@@ -26,7 +26,7 @@ public class TestMyBatis {
 	}
 
 	/**
-	 * 通过 SqlSession 实例来直接执行已映射的 SQL 语句
+	 * 通过 SqlSession 实例来直接执行已映射的 SQL 语句，使用EmployeeMapper1.xml
 	 *
 	 * @throws IOException
 	 */
@@ -35,13 +35,13 @@ public class TestMyBatis {
 		// 放在try的小括号中，1.7增加特性，try执行完毕后会自动关闭括号中可以关闭的资源
 		try (SqlSession session = getFactory().openSession()) {
 			// com.pywl.EmployeeMapper是EmployeeMapper.xml的namespace的值，selectEmp是对应sql的id
-			Employee employee = (Employee) session.selectOne("com.pywl.EmployeeMapper.selectEmp", 1);
+			Employee employee = (Employee) session.selectOne("com.pywl.EmployeeMapper1.selectEmp", 1);
 			System.out.println(employee);
 		}
 	}
 
 	/**
-	 * 使用 mapper 接口
+	 * 使用 mapper 接口，使用EmployeeMapper.xml，推荐使用接口方式
 	 *
 	 * @throws IOException
 	 */
