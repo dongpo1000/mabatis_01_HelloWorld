@@ -11,17 +11,25 @@
 
     <description>MyBatis的HelloWorld，参考文档地址：https://mybatis.org/mybatis-3/zh/getting-started.html</description>
 
+    <properties>
+        <!--Java版本-->
+        <java.version>1.8</java.version>
+        <!--源代码的编码方式-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <!--依赖版本查看地址：https://search.maven.org/-->
     <dependencies>
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.6</version>
+            <version>3.5.4</version>
         </dependency>
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.17</version>
+            <version>8.0.19</version>
         </dependency>
 
         <dependency>
@@ -37,5 +45,19 @@
         </dependency>
 
     </dependencies>
+
+
+    <build>
+        <plugins>
+            <!--设置编译源代码的JDK版本-->
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

@@ -1,9 +1,10 @@
 package com.pywl.entity;
 
 /**
- * @Description 员工实体 tb_employee
- * @Author DongPo
- * @Date 2020-12 20:11
+ * Description: 员工实体 tb_employee
+ *
+ * @author DongPo
+ * @date 2020-12 20:11
  */
 public class Employee {
 	/**
